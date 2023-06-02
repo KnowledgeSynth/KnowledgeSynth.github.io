@@ -37,7 +37,6 @@
       "fontStyle": "bold",
       "hoverFontStyle": "bold",
       "labelFont": "Congenial",
-      "labelSize": "proportional",
       "labelSizeRatio": 6,
       "labelThreshold": 0
     },
