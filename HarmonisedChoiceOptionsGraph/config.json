@@ -14,7 +14,7 @@
   },
   "legend": {
     "edgeLabel": "Observed Statistical Relationship (the ticker the more evidence)",
-    "colorLabel": "Green \u003d Significant; Orange \u003d Insignificant",
+    "colorLabel": "Green \u003d Significant; Orange \u003d Insignificant/ Inconsistent",
     "nodeLabel": "Outer Circle \u003d Behavior Determinants; Inner Circle \u003d Behavior Choice Options"
   },
   "features": {
