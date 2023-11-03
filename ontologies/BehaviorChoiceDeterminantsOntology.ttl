@@ -4,16 +4,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl> .
+@base <https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#> .
 
-<https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl> rdf:type owl:Ontology ;
+<https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#> rdf:type owl:Ontology ;
                                                                                        rdfs:comment "The upperlevel ontology is the BehaviorChoiceDeterminantsOntology, published by T. Sonnenschein, G. Ardine de Wit, N. R. den Braver, R. Vermeulen and S. Scheider in 2023. It can be populated using extracted evidence from published scientific articles about determinants of a specific behavior choice. Once populated, it functions as a knowledge base of behavioral evidence that can be queried to inform or validate the structure of behavior models." .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttldeterminantStudiedIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#determinantStudiedIn
 :determinantStudiedIn rdf:type owl:ObjectProperty ;
                       owl:inverseOf :studiesDeterminant ;
                       rdfs:domain :BehaviorDeterminant ;
@@ -21,28 +21,28 @@
                       rdfs:comment "determinantStudiedIn links the behavior determinant that was analysed in a specific evidence instance directly to the study that analysed it. It is the inverse of studiesDeterminant." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsConsistency
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsConsistency
 :findsConsistency rdf:type owl:ObjectProperty ;
                   owl:inverseOf :foundConsistentBy ;
                   rdfs:domain :Study ;
                   rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsCorrelation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsCorrelation
 :findsCorrelation rdf:type owl:ObjectProperty ;
                   owl:inverseOf :foundCorrelatedBy ;
                   rdfs:domain :Study ;
                   rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsInconsistency
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsInconsistency
 :findsInconsistency rdf:type owl:ObjectProperty ;
                     owl:inverseOf :foundInconsistentBy ;
                     rdfs:domain :Study ;
                     rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsInsignificance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsInsignificance
 :findsInsignificance rdf:type owl:ObjectProperty ;
                      owl:inverseOf :foundInsignificantBy ;
                      rdfs:domain :Study ;
@@ -50,7 +50,7 @@
                      owl:propertyDisjointWith :findsSignificance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsNegativeAssociation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsNegativeAssociation
 :findsNegativeAssociation rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :findsSignificance ;
                           owl:inverseOf :negativeAssociationFoundBy ;
@@ -59,7 +59,7 @@
                           owl:propertyDisjointWith :findsPositiveAssociation .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsPositiveAssociation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsPositiveAssociation
 :findsPositiveAssociation rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :findsSignificance ;
                           owl:inverseOf :positiveAssociationFoundBy ;
@@ -67,7 +67,7 @@
                           rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsSignificance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#findsSignificance
 :findsSignificance rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :findsCorrelation ;
                    owl:inverseOf :foundSignificantBy ;
@@ -75,53 +75,53 @@
                    rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundConsistentBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#foundConsistentBy
 :foundConsistentBy rdf:type owl:ObjectProperty ;
                    rdfs:domain :EvidenceInstance ;
                    rdfs:range :Study .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundCorrelatedBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#foundCorrelatedBy
 :foundCorrelatedBy rdf:type owl:ObjectProperty ;
                    rdfs:domain :EvidenceInstance ;
                    rdfs:range :Study .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundInconsistentBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#foundInconsistentBy
 :foundInconsistentBy rdf:type owl:ObjectProperty ;
                      rdfs:domain :EvidenceInstance ;
                      rdfs:range :Study .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundInsignificantBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#foundInsignificantBy
 :foundInsignificantBy rdf:type owl:ObjectProperty ;
                       rdfs:domain :EvidenceInstance ;
                       rdfs:range :Study ;
                       owl:propertyDisjointWith :foundSignificantBy .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundSignificantBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#foundSignificantBy
 :foundSignificantBy rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :foundCorrelatedBy ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range :Study .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlgroupStudiedIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#groupStudiedIn
 :groupStudiedIn rdf:type owl:ObjectProperty ;
                 owl:inverseOf :studiesGroup ;
                 rdfs:domain :IndividualProperty ;
                 rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlmoderatorIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#moderatorIn
 :moderatorIn rdf:type owl:ObjectProperty ;
              owl:inverseOf :studiesModerator ;
              rdfs:domain :BehaviorModerator ;
              rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlnegativeAssociationFoundBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#negativeAssociationFoundBy
 :negativeAssociationFoundBy rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :foundSignificantBy ;
                             rdfs:domain :EvidenceInstance ;
@@ -129,54 +129,54 @@
                             owl:propertyDisjointWith :positiveAssociationFoundBy .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlpositiveAssociationFoundBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#positiveAssociationFoundBy
 :positiveAssociationFoundBy rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :foundSignificantBy ;
                             rdfs:domain :EvidenceInstance ;
                             rdfs:range :Study .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlregardsChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#regardsChoiceOption
 :regardsChoiceOption rdf:type owl:ObjectProperty ;
                      owl:inverseOf :studiedChoiceOption ;
                      rdfs:domain :EvidenceInstance ;
                      rdfs:range :BehaviorChoiceOption .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlregardsDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#regardsDeterminant
 :regardsDeterminant rdf:type owl:ObjectProperty ;
                     owl:inverseOf :studiedDeterminant ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range :BehaviorDeterminant .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiedChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#studiedChoiceOption
 :studiedChoiceOption rdf:type owl:ObjectProperty ,
                               owl:TransitiveProperty ;
                      rdfs:domain :BehaviorChoiceOption ;
                      rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiedDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#studiedDeterminant
 :studiedDeterminant rdf:type owl:ObjectProperty ;
                     rdfs:domain :BehaviorDeterminant ;
                     rdfs:range :EvidenceInstance .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#studiesDeterminant
 :studiesDeterminant rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :Study ;
                     rdfs:range :BehaviorDeterminant .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesGroup
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#studiesGroup
 :studiesGroup rdf:type owl:ObjectProperty ;
               rdfs:domain :EvidenceInstance ;
               rdfs:range :IndividualProperty .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesModerator
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#studiesModerator
 :studiesModerator rdf:type owl:ObjectProperty ;
                   rdfs:domain :EvidenceInstance ;
                   rdfs:range :BehaviorModerator .
@@ -186,42 +186,42 @@
 #    Data properties
 #################################################################
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfullSentenceString
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#fullSentenceString
 :fullSentenceString rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range xsd:string .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasCitation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#hasCitation
 :hasCitation rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain :Study ;
              rdfs:range xsd:string .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasJournal
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#hasJournal
 :hasJournal rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :Study ;
             rdfs:range xsd:string .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasStudyYear
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#hasStudyYear
 :hasStudyYear rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Study ;
               rdfs:range xsd:int .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasTitle
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#hasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :Study ;
           rdfs:range xsd:string .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlsentenceNumber
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#sentenceNumber
 :sentenceNumber rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain :EvidenceInstance ;
@@ -232,49 +232,49 @@
 #    Classes
 #################################################################
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#BehaviorChoiceOption
 :BehaviorChoiceOption rdf:type owl:Class ;
                       rdfs:comment "Behavior Choice Options are kinds of activities from which an individual can choose for the specified behavioral choice. They are the values of the dependent variables in the explanatory studies from which knowledge is extracted. (e.g walking, biking for modal choice)." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#BehaviorDeterminant
 :BehaviorDeterminant rdf:type owl:Class ;
                      rdfs:comment "Behavior Determinants are factors and constraints that influence a behavioral decision of an individual. These are the determinants or independent variables in the evidence provided. (e.g. pedestrian pathway width, gasoline price)." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorModerator
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#BehaviorModerator
 :BehaviorModerator rdf:type owl:Class ;
                    rdfs:comment "BehaviorModerators are variables that moderate the relationship between a behavior determinant and behavior choice option. (e.g. household income as a moderator of the importance of gasoline prices for choosing the car as a mode of transport)" .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlEvidenceInstance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#EvidenceInstance
 :EvidenceInstance rdf:type owl:Class ;
                   rdfs:comment "EvidenceInstance is an instance in which a scientific article provided evidenc, which describes a statistical association between a particular behavior choice option and a behavior determinant using some study group or moderation effect." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlIndividualProperty
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#IndividualProperty
 :IndividualProperty rdf:type owl:Class ;
                     rdfs:comment "IndividualProperties are properties of the individual that define the Study Group, i.e. the specific population group or sample used in analysis. (e.g. elderly, females)" .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlMetaAnalysis
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#MetaAnalysis
 :MetaAnalysis rdf:type owl:Class ;
               rdfs:subClassOf :ReviewStudy ;
               rdfs:comment "MetaAnalysis are published scientific articles that conduct a meta analysis." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlReviewStudy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#ReviewStudy
 :ReviewStudy rdf:type owl:Class ;
              rdfs:subClassOf :Study ;
              rdfs:comment "ReviewStudies are scientific articles that conduct a review of scientific evidence." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlStudy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#Study
 :Study rdf:type owl:Class ;
        rdfs:comment "Studies are published scientific articles, which is the source from which the evidence has been extracted." .
 
 
-###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlSystematicReviewStudy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#SystematicReviewStudy
 :SystematicReviewStudy rdf:type owl:Class ;
                        rdfs:subClassOf :ReviewStudy ;
                        rdfs:comment "SystematicReviewStudies are published scientific articles that conduct a systematic review." .
