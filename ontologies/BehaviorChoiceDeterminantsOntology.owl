@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://tabeasonnenschein.github.io/ontologies/bcdo.html"
+     xml:base="https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://tabeasonnenschein.github.io/ontologies/bcdo.html">
-    <Prefix name="" IRI="http://www.semanticweb.org/tabea/ontologies/2021/11/behavioural_model"/>
+     ontologyIRI="https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl">
+    <Prefix name="" IRI="https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -14,7 +14,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal>The upperlevel ontology is the BehaviorChoiceDeterminantsOntology, developed by T. Sonnenschein, G. Ardine de Wit, N. R. den Braver, R. Vermeulen and S. Scheider in 2022. It can be populated using extracted evidence from published scientific articles about determinants of a specific behavior choice. Once populated, it functions as a knowledge base of behavioral evidence that can be queried to inform or validate the structure of behavior models.</Literal>
+        <Literal>The upperlevel ontology is the BehaviorChoiceDeterminantsOntology, published by T. Sonnenschein, G. Ardine de Wit, N. R. den Braver, R. Vermeulen and S. Scheider in 2023. It can be populated using extracted evidence from published scientific articles about determinants of a specific behavior choice. Once populated, it functions as a knowledge base of behavioral evidence that can be queried to inform or validate the structure of behavior models.</Literal>
     </Annotation>
     <Declaration>
         <Class IRI="#BehaviorChoiceOption"/>

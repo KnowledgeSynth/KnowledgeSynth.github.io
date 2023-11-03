@@ -1,19 +1,19 @@
-@prefix : <https://tabeasonnenschein.github.io/ontologies/bcdo.html> .
+@prefix : <https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://tabeasonnenschein.github.io/ontologies/bcdo.html> .
+@base <https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl> .
 
-<https://tabeasonnenschein.github.io/ontologies/bcdo.html> rdf:type owl:Ontology ;
-                                                            rdfs:comment "The upperlevel ontology is the BehaviorChoiceDeterminantsOntology, developed by T. Sonnenschein, G. Ardine de Wit, N. R. den Braver, R. Vermeulen and S. Scheider in 2022. It can be populated using extracted evidence from published scientific articles about determinants of a specific behavior choice. Once populated, it functions as a knowledge base of behavioral evidence that can be queried to inform or validate the structure of behavior models." .
+<https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttl> rdf:type owl:Ontology ;
+                                                                                       rdfs:comment "The upperlevel ontology is the BehaviorChoiceDeterminantsOntology, published by T. Sonnenschein, G. Ardine de Wit, N. R. den Braver, R. Vermeulen and S. Scheider in 2023. It can be populated using extracted evidence from published scientific articles about determinants of a specific behavior choice. Once populated, it functions as a knowledge base of behavioral evidence that can be queried to inform or validate the structure of behavior models." .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#determinantStudiedIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttldeterminantStudiedIn
 :determinantStudiedIn rdf:type owl:ObjectProperty ;
                       owl:inverseOf :studiesDeterminant ;
                       rdfs:domain :BehaviorDeterminant ;
@@ -21,28 +21,28 @@
                       rdfs:comment "determinantStudiedIn links the behavior determinant that was analysed in a specific evidence instance directly to the study that analysed it. It is the inverse of studiesDeterminant." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsConsistency
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsConsistency
 :findsConsistency rdf:type owl:ObjectProperty ;
                   owl:inverseOf :foundConsistentBy ;
                   rdfs:domain :Study ;
                   rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsCorrelation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsCorrelation
 :findsCorrelation rdf:type owl:ObjectProperty ;
                   owl:inverseOf :foundCorrelatedBy ;
                   rdfs:domain :Study ;
                   rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsInconsistency
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsInconsistency
 :findsInconsistency rdf:type owl:ObjectProperty ;
                     owl:inverseOf :foundInconsistentBy ;
                     rdfs:domain :Study ;
                     rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsInsignificance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsInsignificance
 :findsInsignificance rdf:type owl:ObjectProperty ;
                      owl:inverseOf :foundInsignificantBy ;
                      rdfs:domain :Study ;
@@ -50,7 +50,7 @@
                      owl:propertyDisjointWith :findsSignificance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsNegativeAssociation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsNegativeAssociation
 :findsNegativeAssociation rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :findsSignificance ;
                           owl:inverseOf :negativeAssociationFoundBy ;
@@ -59,7 +59,7 @@
                           owl:propertyDisjointWith :findsPositiveAssociation .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsPositiveAssociation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsPositiveAssociation
 :findsPositiveAssociation rdf:type owl:ObjectProperty ;
                           rdfs:subPropertyOf :findsSignificance ;
                           owl:inverseOf :positiveAssociationFoundBy ;
@@ -67,7 +67,7 @@
                           rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#findsSignificance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfindsSignificance
 :findsSignificance rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :findsCorrelation ;
                    owl:inverseOf :foundSignificantBy ;
@@ -75,53 +75,53 @@
                    rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#foundConsistentBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundConsistentBy
 :foundConsistentBy rdf:type owl:ObjectProperty ;
                    rdfs:domain :EvidenceInstance ;
                    rdfs:range :Study .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#foundCorrelatedBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundCorrelatedBy
 :foundCorrelatedBy rdf:type owl:ObjectProperty ;
                    rdfs:domain :EvidenceInstance ;
                    rdfs:range :Study .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#foundInconsistentBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundInconsistentBy
 :foundInconsistentBy rdf:type owl:ObjectProperty ;
                      rdfs:domain :EvidenceInstance ;
                      rdfs:range :Study .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#foundInsignificantBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundInsignificantBy
 :foundInsignificantBy rdf:type owl:ObjectProperty ;
                       rdfs:domain :EvidenceInstance ;
                       rdfs:range :Study ;
                       owl:propertyDisjointWith :foundSignificantBy .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#foundSignificantBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfoundSignificantBy
 :foundSignificantBy rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :foundCorrelatedBy ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range :Study .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#groupStudiedIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlgroupStudiedIn
 :groupStudiedIn rdf:type owl:ObjectProperty ;
                 owl:inverseOf :studiesGroup ;
                 rdfs:domain :IndividualProperty ;
                 rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#moderatorIn
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlmoderatorIn
 :moderatorIn rdf:type owl:ObjectProperty ;
              owl:inverseOf :studiesModerator ;
              rdfs:domain :BehaviorModerator ;
              rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#negativeAssociationFoundBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlnegativeAssociationFoundBy
 :negativeAssociationFoundBy rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :foundSignificantBy ;
                             rdfs:domain :EvidenceInstance ;
@@ -129,54 +129,54 @@
                             owl:propertyDisjointWith :positiveAssociationFoundBy .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#positiveAssociationFoundBy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlpositiveAssociationFoundBy
 :positiveAssociationFoundBy rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf :foundSignificantBy ;
                             rdfs:domain :EvidenceInstance ;
                             rdfs:range :Study .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#regardsChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlregardsChoiceOption
 :regardsChoiceOption rdf:type owl:ObjectProperty ;
                      owl:inverseOf :studiedChoiceOption ;
                      rdfs:domain :EvidenceInstance ;
                      rdfs:range :BehaviorChoiceOption .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#regardsDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlregardsDeterminant
 :regardsDeterminant rdf:type owl:ObjectProperty ;
                     owl:inverseOf :studiedDeterminant ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range :BehaviorDeterminant .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#studiedChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiedChoiceOption
 :studiedChoiceOption rdf:type owl:ObjectProperty ,
                               owl:TransitiveProperty ;
                      rdfs:domain :BehaviorChoiceOption ;
                      rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#studiedDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiedDeterminant
 :studiedDeterminant rdf:type owl:ObjectProperty ;
                     rdfs:domain :BehaviorDeterminant ;
                     rdfs:range :EvidenceInstance .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#studiesDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesDeterminant
 :studiesDeterminant rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :Study ;
                     rdfs:range :BehaviorDeterminant .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#studiesGroup
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesGroup
 :studiesGroup rdf:type owl:ObjectProperty ;
               rdfs:domain :EvidenceInstance ;
               rdfs:range :IndividualProperty .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#studiesModerator
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlstudiesModerator
 :studiesModerator rdf:type owl:ObjectProperty ;
                   rdfs:domain :EvidenceInstance ;
                   rdfs:range :BehaviorModerator .
@@ -186,42 +186,42 @@
 #    Data properties
 #################################################################
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#fullSentenceString
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlfullSentenceString
 :fullSentenceString rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain :EvidenceInstance ;
                     rdfs:range xsd:string .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#hasCitation
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasCitation
 :hasCitation rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain :Study ;
              rdfs:range xsd:string .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#hasJournal
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasJournal
 :hasJournal rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :Study ;
             rdfs:range xsd:string .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#hasStudyYear
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasStudyYear
 :hasStudyYear rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Study ;
               rdfs:range xsd:int .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#hasTitle
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlhasTitle
 :hasTitle rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :Study ;
           rdfs:range xsd:string .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#sentenceNumber
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlsentenceNumber
 :sentenceNumber rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain :EvidenceInstance ;
@@ -232,49 +232,49 @@
 #    Classes
 #################################################################
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#BehaviorChoiceOption
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorChoiceOption
 :BehaviorChoiceOption rdf:type owl:Class ;
                       rdfs:comment "Behavior Choice Options are kinds of activities from which an individual can choose for the specified behavioral choice. They are the values of the dependent variables in the explanatory studies from which knowledge is extracted. (e.g walking, biking for modal choice)." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#BehaviorDeterminant
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorDeterminant
 :BehaviorDeterminant rdf:type owl:Class ;
                      rdfs:comment "Behavior Determinants are factors and constraints that influence a behavioral decision of an individual. These are the determinants or independent variables in the evidence provided. (e.g. pedestrian pathway width, gasoline price)." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#BehaviorModerator
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlBehaviorModerator
 :BehaviorModerator rdf:type owl:Class ;
                    rdfs:comment "BehaviorModerators are variables that moderate the relationship between a behavior determinant and behavior choice option. (e.g. household income as a moderator of the importance of gasoline prices for choosing the car as a mode of transport)" .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#EvidenceInstance
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlEvidenceInstance
 :EvidenceInstance rdf:type owl:Class ;
                   rdfs:comment "EvidenceInstance is an instance in which a scientific article provided evidenc, which describes a statistical association between a particular behavior choice option and a behavior determinant using some study group or moderation effect." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#IndividualProperty
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlIndividualProperty
 :IndividualProperty rdf:type owl:Class ;
                     rdfs:comment "IndividualProperties are properties of the individual that define the Study Group, i.e. the specific population group or sample used in analysis. (e.g. elderly, females)" .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#MetaAnalysis
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlMetaAnalysis
 :MetaAnalysis rdf:type owl:Class ;
               rdfs:subClassOf :ReviewStudy ;
               rdfs:comment "MetaAnalysis are published scientific articles that conduct a meta analysis." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#ReviewStudy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlReviewStudy
 :ReviewStudy rdf:type owl:Class ;
              rdfs:subClassOf :Study ;
              rdfs:comment "ReviewStudies are scientific articles that conduct a review of scientific evidence." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#Study
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlStudy
 :Study rdf:type owl:Class ;
        rdfs:comment "Studies are published scientific articles, which is the source from which the evidence has been extracted." .
 
 
-###  https://tabeasonnenschein.github.io/ontologies/bcdo.html#SystematicReviewStudy
+###  https://knowledgesynth.github.io/ontologies/BehaviorChoiceDeterminantsOntology.ttlSystematicReviewStudy
 :SystematicReviewStudy rdf:type owl:Class ;
                        rdfs:subClassOf :ReviewStudy ;
                        rdfs:comment "SystematicReviewStudies are published scientific articles that conduct a systematic review." .
